@@ -1,0 +1,16 @@
+.roi-inner {
+  max-width: 560px;
+  margin-top: 28px;
+}
+
+.roi-result {
+  padding: 20px;
+  margin-bottom: 20px;
+  background: var(--light-gray);
+  border-top: 3px solid var(--navy);
+  border-radius: var(--radius);
+}
+
+.roi-result p {
+  margin: 0;
+}

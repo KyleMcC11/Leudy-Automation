@@ -1,0 +1,163 @@
+.services-grid {
+  display: block;
+  margin-top: 28px;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.service-card p {
+  color: var(--text);
+}
+
+.problems {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 3px solid var(--navy);
+}
+
+.problems h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.problems ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.problems li {
+  padding-left: 20px;
+  position: relative;
+  color: var(--text);
+}
+
+.problems li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.capabilities {
+  margin-top: 28px;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.offers-list {
+  margin-top: 8px;
+}
+
+.offer-card {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.offer-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.offer-best {
+  margin-top: 6px;
+  color: var(--text-secondary);
+}
+
+.offer-card ul {
+  margin: 14px 0 0;
+  padding-left: 22px;
+}
+
+.offer-card li {
+  margin-bottom: 6px;
+}
+
+.offer-timeline {
+  margin-top: 14px;
+}
+
+.offer-card .btn {
+  margin-top: 18px;
+}
+
+.every-build,
+.addons {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 3px solid var(--navy);
+}
+
+.every-build h3,
+.addons h3,
+.what-we-build h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.every-build ul,
+.addons ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.every-build li,
+.addons li {
+  margin-bottom: 8px;
+}
+
+.what-we-build {
+  margin-top: 36px;
+}
+
+.what-we-build h4 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 24px 0 10px;
+}
+
+.what-we-build dl {
+  margin: 0;
+}
+
+.what-we-build dl div {
+  margin-bottom: 14px;
+}
+
+.what-we-build dt {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.what-we-build dd {
+  margin: 2px 0 0;
+  color: var(--text);
+}
+
+@media (max-width: 700px) {
+  .service-card {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .problems ul {
+    grid-template-columns: 1fr;
+  }
+}

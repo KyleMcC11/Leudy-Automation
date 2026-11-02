@@ -1,0 +1,29 @@
+.testimonial-list {
+  max-width: 760px;
+  margin-top: 28px;
+}
+
+.testimonial {
+  margin: 0;
+  padding: 26px 0;
+  border-top: 1px solid var(--border);
+}
+
+.testimonial blockquote {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.testimonial figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 700px) {
+  .testimonial blockquote {
+    font-size: 18px;
+  }
+}

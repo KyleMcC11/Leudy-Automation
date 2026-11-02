@@ -1,0 +1,209 @@
+/* De-AI pass (v2): flat, left-aligned, no floating cards, square corners. */
+:root {
+  --navy: #0f172a;
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --white: #ffffff;
+  --light-gray: #f8fafc;
+  --border: #dbe2ea;
+  --text: #1e293b;
+  --text-secondary: #475569;
+  --heading: #0f172a;
+  --shadow: none;
+  --shadow-hover: none;
+  --radius: 4px;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading);
+  line-height: 1.25;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--blue);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 72px 0;
+  border-top: 1px solid var(--border);
+}
+
+.section-alt {
+  background: var(--white);
+}
+
+.section-eyebrow {
+  display: inline-block;
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  max-width: 760px;
+}
+
+.section-lead {
+  margin-top: 12px;
+  font-size: 17px;
+  color: var(--text-secondary);
+  max-width: 680px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: var(--radius);
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #1e293b;
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--navy);
+  border-color: var(--navy);
+}
+
+.btn-secondary:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* Warm accent for the conversion action (Book), per the brand proposal:
+   trustworthy blue/navy plus a warm accent, to be confirmed with Ben. */
+.btn-book {
+  background: #f59e0b;
+  color: var(--navy);
+}
+
+.btn-book:hover {
+  background: #d97706;
+  color: var(--navy);
+}
+
+.mobile-book-bar {
+  display: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 200;
+  padding: 10px 16px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 44px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  main {
+    padding-bottom: 76px;
+  }
+
+  .mobile-book-bar {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: var(--white);
+    border-top: 1px solid var(--border);
+  }
+
+  .mobile-book-bar .btn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
